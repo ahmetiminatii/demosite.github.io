@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeniden Umut Partisi | Anasayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="YUP Logo" class="logo-img">
+                <div class="logo-text">YENİDEN UMUT <span>PARTİSİ</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="baskanliklar.html">Başkanlıklar</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="tuzuk.html">Tüzük</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-banner">
+        <h1>GELECEĞE UMUTLA BAKIYORUZ</h1>
+        <p>Milletin sesi, halkın gücü olmak için yola çıktık.</p>
+    </div>
+
+    <div class="container">
+        <h2 style="margin-bottom: 30px; color: var(--primary-color);">KAMUOYUNA DUYURULAR</h2>
+        <div class="duyuru-grid">
+            
+            <div class="duyuru-card">
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800" class="duyuru-img" alt="Duyuru">
+                <div class="duyuru-body">
+                    <small style="color:var(--secondary-color)">13 Şubat 2026</small>
+                    <h3>Genel Merkez Açılışı</h3>
+                    <p>Ankara'daki yeni genel merkezimizde halkımızın hizmetindeyiz...</p>
+                    <button class="btn-devam" onclick="acModal('Genel Merkez Açılışı', 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800', 'Ankara Kızılay\'daki yeni genel merkezimiz büyük bir coşkuyla açıldı. Yakup Kuzay liderliğinde çıktığımız bu yolda Ankara merkezimiz tüm Türkiye\'ye umut olacak.')">Devamını Oku</button>
+                </div>
+            </div>
+
+            <div class="duyuru-card">
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800" class="duyuru-img" alt="Duyuru">
+                <div class="duyuru-body">
+                    <small style="color:var(--secondary-color)">10 Şubat 2026</small>
+                    <h3>Ekonomi Bildirisi</h3>
+                    <p>Ekonomik kalkınma projelerimizin detayları açıklandı...</p>
+                    <button class="btn-devam" onclick="acModal('Ekonomi Bildirisi', 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800', 'Partimiz, üretime dayalı ve liyakat esaslı yeni ekonomi paketini hazırladı. En kısa sürede tüm detayları halkımızla paylaşacağız.')">Devamını Oku</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="yupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="kapatModal()">&times;</span>
+            <img id="modalResim" src="" class="modal-img">
+            <h2 id="modalBaslik" style="color:var(--primary-color)"></h2>
+            <hr style="margin: 15px 0;">
+            <p id="modalIcerik"></p>
+        </div>
+    </div>
+
+    <script>
+        function acModal(baslik, resimSrc, icerik) {
+            document.getElementById('modalBaslik').innerText = baslik;
+            document.getElementById('modalResim').src = resimSrc;
+            document.getElementById('modalIcerik').innerText = icerik;
+            document.getElementById('yupModal').style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        function kapatModal() {
+            document.getElementById('yupModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+
+    <footer><p>&copy; 2026 Yeniden Umut Partisi</p></footer>
+</body>
+</html>
