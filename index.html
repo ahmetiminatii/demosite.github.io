@@ -22,32 +22,36 @@
         </nav>
     </header>
 
-    <div class="page-banner">
-        <h1>GELECEĞE UMUTLA BAKIYORUZ</h1>
-        <p>Milletin sesi, halkın gücü olmak için yola çıktık.</p>
+    <div style="position: relative; background-color: #008080; padding: 120px 20px; text-align: center; overflow: hidden; border-bottom: 5px solid #e63946; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: url('https://images.unsplash.com/photo-1590956555132-4752643320c9?q=80&w=2000') center/cover; opacity: 0.15; z-index: 1;"></div>
+        
+        <div style="position: relative; z-index: 2; color: white; max-width: 900px;">
+            <h1 style="font-size: 3rem; text-transform: uppercase; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin-bottom: 20px; line-height: 1.2;">GELECEĞE UMUTLA BAKIYORUZ</h1>
+            <p style="font-size: 1.4rem; font-weight: 400; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px;">Milletin sesi, halkın gücü olmak için yola çıktık.</p>
+        </div>
     </div>
 
     <div class="container">
-        <h2 style="margin-bottom: 30px; color: var(--primary-color);">KAMUOYUNA DUYURULAR</h2>
+        <h2 style="color:#008080; margin-bottom: 30px; border-left: 5px solid #e63946; padding-left: 15px;">KAMUOYUNA DUYURULAR</h2>
         <div class="duyuru-grid">
             
             <div class="duyuru-card">
-                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800" class="duyuru-img" alt="Duyuru">
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800" class="duyuru-img">
                 <div class="duyuru-body">
-                    <small style="color:var(--secondary-color)">13 Şubat 2026</small>
-                    <h3>Genel Merkez Açılışı</h3>
+                    <small style="color:#e63946">13 Şubat 2026</small>
+                    <h3 style="margin: 10px 0;">Genel Merkez Açılışı</h3>
                     <p>Ankara'daki yeni genel merkezimizde halkımızın hizmetindeyiz...</p>
-                    <button class="btn-devam" onclick="acModal('Genel Merkez Açılışı', 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800', 'Ankara Kızılay\'daki yeni genel merkezimiz büyük bir coşkuyla açıldı. Yakup Kuzay liderliğinde çıktığımız bu yolda Ankara merkezimiz tüm Türkiye\'ye umut olacak.')">Devamını Oku</button>
+                    <button class="btn-devam" onclick="acModal('Genel Merkez Açılışı', 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800', 'Yeniden Umut Partisi Genel Merkezi Ankara Kızılay\'da hizmete açılmıştır.')">Devamını Oku</button>
                 </div>
             </div>
 
             <div class="duyuru-card">
-                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800" class="duyuru-img" alt="Duyuru">
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800" class="duyuru-img">
                 <div class="duyuru-body">
-                    <small style="color:var(--secondary-color)">10 Şubat 2026</small>
-                    <h3>Ekonomi Bildirisi</h3>
+                    <small style="color:#e63946">10 Şubat 2026</small>
+                    <h3 style="margin: 10px 0;">Ekonomi Bildirisi</h3>
                     <p>Ekonomik kalkınma projelerimizin detayları açıklandı...</p>
-                    <button class="btn-devam" onclick="acModal('Ekonomi Bildirisi', 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800', 'Partimiz, üretime dayalı ve liyakat esaslı yeni ekonomi paketini hazırladı. En kısa sürede tüm detayları halkımızla paylaşacağız.')">Devamını Oku</button>
+                    <button class="btn-devam" onclick="acModal('Ekonomi Bildirisi', 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800', 'Yeni ekonomi paketimiz ile üretim odaklı bir gelecek inşa ediyoruz.')">Devamını Oku</button>
                 </div>
             </div>
 
@@ -57,17 +61,16 @@
     <div id="yupModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="kapatModal()">&times;</span>
-            <img id="modalResim" src="" class="modal-img">
-            <h2 id="modalBaslik" style="color:var(--primary-color)"></h2>
-            <hr style="margin: 15px 0;">
+            <img id="modalResim" src="" style="width:100%; height:300px; object-fit:cover; border-radius:10px; margin-bottom:20px;">
+            <h2 id="modalBaslik" style="color:#008080; margin-bottom:15px;"></h2>
             <p id="modalIcerik"></p>
         </div>
     </div>
 
     <script>
-        function acModal(baslik, resimSrc, icerik) {
+        function acModal(baslik, resim, icerik) {
             document.getElementById('modalBaslik').innerText = baslik;
-            document.getElementById('modalResim').src = resimSrc;
+            document.getElementById('modalResim').src = resim;
             document.getElementById('modalIcerik').innerText = icerik;
             document.getElementById('yupModal').style.display = "block";
             document.body.style.overflow = "hidden";
